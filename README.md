@@ -5,5 +5,5 @@
 # while_true.py 迴圈使用情境，用python 來操作Minecraft
 ## ##是標題2 
 ## password.py 密碼重試程式
-### ##是標題3
+### ###是標題3
 ### guess-num.py 隨機猜數字
