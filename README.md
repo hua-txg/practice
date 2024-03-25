@@ -7,3 +7,4 @@
 ## password.py 密碼重試程式
 ### ###是標題3
 ### guess-num.py 隨機猜數字
+### for.py 練習for loop 及 list 清單
