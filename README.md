@@ -8,3 +8,4 @@
 ### ###是標題3
 ### guess-num.py 隨機猜數字
 ### for.py 練習for loop 及 list 清單
+### read-foot.py 讀取檔案，使用strip() 去除\n及空格
