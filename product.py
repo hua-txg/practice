@@ -15,3 +15,14 @@ print(products)
 for p in products:
 	print(p)
 	print(p[0], '的價格是', p[1])
+
+#輸入結果寫入檔案
+with open('products.txt', 'w') as f:
+	for p in products:
+		f.write(p[0]+','+p[1]+'\n')
+
+with open('products.csv', 'w') as f:
+	for p in products:
+		f.write(p[0]+','+p[1]+'\n')
+
+
