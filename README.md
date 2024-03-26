@@ -10,3 +10,4 @@
 ### for.py 練習for loop 及 list 清單
 ### read-foot.py 讀取檔案，使用strip() 去除\n及空格
 ### reviews-analytics.py 留言檔分析
+### product.py 記帳程式
