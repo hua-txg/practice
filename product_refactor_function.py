@@ -1,27 +1,20 @@
 import os
 
-#讀取檔案  
+#讀取檔案，再次refactor 只做讀取檔案，與判斷檔案存不存在分開 
 #檔名'products.csv'寫成參數,每次可讀不同檔案, 
 #products = [] 讀到的資料存到 products 清單，故要回吐用return，加在最後一行
 def read_file(filename):
 	products = []
-	if os.path.isfile(filename):
-		print('yeah! 找到檔案了!')
-		
-		with open(filename, 'r', encoding='utf-8') as f:
-			for line in f:
-				if '商品,價格' in line:
-					continue #繼續
-				# s = line.strip().split(',')
-				# name = s[0]
-				# price = s[1]
-				name, price = line.strip().split(',')
-				products.append([name, price])
-			print(products)
-	else:
-		print('找不到檔案')
+	with open(filename, 'r', encoding='utf-8') as f:
+		for line in f:
+			if '商品,價格' in line:
+				continue #繼續
+			# s = line.strip().split(',')
+			# name = s[0]
+			# price = s[1]
+			name, price = line.strip().split(',')
+			products.append([name, price])
 	return products
-
 
 
 #讓使用者輸入
@@ -63,9 +56,16 @@ def write_file(filename, products):
 
 
 
+def main():
+	filename = 'products.csv'
+	if os.path.isfile(filename):           #一行式的if不會重複使用就不用寫成function
+		print('yeah! 找到檔案了!')
+		products = read_file(filename)  #read_file()有return 故用products來存	
+	else:
+			print('找不到檔案')
 
+	products = user_input(products)       #把read_file()的products再讓使用者key in後，return在存回products
+	print_products(products)              #只是印出不用回傳
+	write_file('products.csv', products)
 
-products = read_file('products.csv')  #read_file()有return 故用products來存
-products = user_input(products)       #把read_file()的products再讓使用者key in後，return在存回products
-print_products(products)              #只是印出不用回傳
-write_file('products.csv', products)
+main()
