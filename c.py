@@ -11,6 +11,7 @@ class Student:
 		print('我在做作業', hw)
 	def study(self):
 		print('我在讀書')
+		self.score += 5
 	def sleep(self):
 		print('i am sleeping')
    
@@ -18,4 +19,7 @@ class Student:
 s1 = Student('John', 100)
 s2 = Student('Allen', 95)
 print(s1.name, s1.score)  #屬性給印出來
+print(s2.name, s2.score)
+
+s2.study()
 print(s2.name, s2.score)
