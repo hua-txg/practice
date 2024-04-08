@@ -2,7 +2,7 @@ class Student:
 	
 	def __init__(self, name):
 		self.name = name  #將參數的name存成自己的name
-		print('我誕生了')
+		print('我誕生了名字是', self.name )
 		self.do_hw('英文')
 		self.study()
 		self.sleep()
@@ -14,6 +14,6 @@ class Student:
 		print('i am sleeping')
    
 
-s = Student('John')
-
-print(s.name) #不是執行function，而是把name那個屬性給印出來
+s1 = Student('John')
+s2 = Student('Allen')
+print(s1.name, s2.name) #不是執行function，而是把name那個屬性給印出來
