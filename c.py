@@ -1,6 +1,10 @@
 class Student:
+	
 	def __init__(self):
+		self.name = 'Allen'
 		print('我誕生了')
+
+
 		self.do_hw('英文')
 		self.study()
 		self.sleep()
@@ -13,4 +17,5 @@ class Student:
    
 
 s = Student()
-
+print(dir(s))
+print(s.name) #不是執行function，而是把name那個屬性給印出來
